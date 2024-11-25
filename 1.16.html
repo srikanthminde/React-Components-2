@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="root"></div>
+    <script type="text/babel">
+        var a=+prompt()
+        var b=+prompt()
+        var c=+prompt()
+        var Abc=function(){
+            var [x,setX]=React.useState(a)
+            var [y,setY]=React.useState(b)
+            var [z,setZ]=React.useState(c)
+            return(
+                <div>
+                <h1>{x>y?(x>z? x:z):(y>z? y:z)}</h1>    
+                </div>
+            )
+        }
+        ReactDOM.render(<Abc/>,document.getElementById("root"))
+    </script>
+    </body>
+</html>
