@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                var [x,setX]=React.useState([9,7,89,"10","56","78","26","90","88","55",100,250,5,9,7,3])
+                return(
+                    <div>
+                    {
+                        x.map((p)=>{
+                            return p%2===0? (<li><i>{p}</i></li>):(<li><b>{p}</b></li>)
+                        })
+                    }    
+                    </div>
+                )
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>
